@@ -22,5 +22,6 @@ def login():
 if __name__ =='__main__':
     #app.run(host="0.0.0.0",debug=True)
     camera = PiCamera()
+    camera.rotation = 180
     camera.capture('/home/pi/flask-rest-api/pictures/image.jpg')
 
