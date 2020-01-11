@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, make_response
 import jwt
+from picamera import PiCamera
 
 app = Flask(__name__)
 
@@ -19,4 +20,7 @@ def login():
     return make_response('Error with auth', 401, {'WWW-Authenticate' : 'Basic realm="Login required"'})
 
 if __name__ =='__main__':
-    app.run(debug=True)
+    #app.run(host="0.0.0.0",debug=True)
+    camera = PiCamera()
+    camera.capture('/home/pi/flask-rest-api/pictures/image.jpg')
+
