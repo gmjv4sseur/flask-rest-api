@@ -1,7 +1,7 @@
 from picamera import PiCamera
 import time
 
-output = "/home/pi/flask-rest-api/video.h264"
+output = "/home/pi/flask-rest-api/video.mp4"
 
 camera = PiCamera()
 camera.rotation = 180
